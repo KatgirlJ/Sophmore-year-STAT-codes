@@ -1,0 +1,31 @@
+
+//Katrinna Jones
+//Programming II
+public class DigitExtractor
+{
+    private int number;
+    
+    public DigitExtractor()
+    {
+        number = 0;
+    }
+        
+    public void hundreds(int h)
+    {
+        h = number / 100;
+        System.out.println("The hundreds place digit is: " + h);
+    }
+    
+    public void tens(int t)
+    {
+        t = number % 100;
+        System.out.println("The hundereds place digit is: " + t);
+    }
+    
+    public void ones (int o)
+    {
+        o = number % 1;
+        System.out.println("The ones place digit is: " + o);
+    }
+    
+}
