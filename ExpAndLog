@@ -1,0 +1,28 @@
+//Katrinna Jones
+//Programming II
+
+import java.util.Scanner;
+public class ExpAndLog
+{
+    public static void main (String [] args)
+    {
+        Scanner input = new Scanner (System.in);
+        double X = 0;
+        double Y = 0;
+        double exponent = 0; 
+        double log = 0;
+        double results = 0;
+        
+        System.out.println ("Enter a value for X: ");
+        X = input.nextInt();
+        System.out.println ("Enter a value for Y: ");
+        Y = input.nextInt();
+        
+        results = Math.pow(X,Y);
+        
+        System.out.println ("The result using Math.pow() is: " + results);
+        
+        results =  Math.exp((Y * Math.log(X)));
+        System.out.println ("The result using the equation is: " + results);
+    }
+}
