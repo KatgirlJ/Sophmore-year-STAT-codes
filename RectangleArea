@@ -1,0 +1,49 @@
+// Katrinna Jones
+//8/20
+import java.util.Scanner; //import this so you can use a scanner for input
+public class RectangleArea
+{
+    public static void main (String[] args)
+    {
+        Scanner input = new Scanner(System.in); 
+        // = is a assignment operator
+        double length; // this is how you declare a variable
+        length = 5; // this is how you intitialize a variable, or store a value 
+        double width = 7; // you can declare and initialize variables on the same line
+        double area = 0; 
+        
+        System.out.print("Please input length of your rectangle: ");
+        length = input.nextInt(); // this stores the next int typed into length
+        System.out.print("Please input width of your rectangle");
+        width = input.nextDouble();
+        // Int is whole number Double is a real number and can have a decimal
+        // attached to it
+        // Int takes up less space + makes thing simple
+        //in parathesis prior to variable
+            System.out.println ("The area is" + area);
+        System.out.println ("Area is a double: " + area);
+        System.out.println ("Area cast as an int: " + (int) area);  
+        
+        // CASTING is the stratagy of temporarily treating 
+        // a variable of one data type as a diifernt data type
+        //to cast a varible, put the temp data type
+        //in parathesis prior to variable
+        //primitive data types only hold small information number (Whole numbers)
+        int test = 7;
+        
+        System.out.println("test as an int" + test);
+        System.out.println("test cast as a double:" + (double) test);
+        
+        char let = 'a';
+        //char is a primative data type that holds a single charecter 
+        // we put it in single quotes because it's small
+        //Every emoji and charecter in the world has a numarical value
+        
+        System.out.println("let as a char: " + let);
+        System.out.println("let cast as an int" +(int) let);
+        
+        System.out.println("What char do you want?" );
+        let = input.next().charAt(0); //this is how you input a char
+        System.out.println ("You typed: " +let);
+    }
+}
