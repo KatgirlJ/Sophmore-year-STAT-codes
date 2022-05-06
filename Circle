@@ -1,0 +1,60 @@
+
+//Katrinna Jones
+//Programming II
+public class Circle //this is a class header
+//public is our ACCESS LEVEL
+//public can be used by other classes
+//the class keyword tells java that this file will make a class
+//class files are used to make OBJECTS
+//circle is the IDENTIFIER for this circle
+//we are essentually creating a new abstract data type for java to use
+{
+    //there will be no main method in here!
+    //we are designing this to be used by other classes
+    
+    //classes are made up of variables, construtors, and methods
+    
+    private double radius;
+    //private means that radius can only be accessed by this file
+    //this is a form of DATA ENCAPSULATION
+    //radius is an INSTANCE VARIABLE
+    //instance variables are unique to each instance of a given object
+    
+    private static final double PI = 3.141592653;
+    //final makes this a CONSTANT variable
+    //we name constant in all upercase letters
+    //the static keyword makes this a CLASS VARIABLE 
+    //class variables are shared between all instances of a given object
+    //NOTE: static varables to not hace to be final
+    
+    //the purpose of a constructor is to initialize instance variable
+    //this is a DEFULT constructor
+    //because it does not take an arguement
+    public Circle() //this is a CONSTRUCTOR header
+    {
+        radius = 1;   
+    }
+    
+    //this constructor takes an arguement and stores it
+    public Circle(double r)
+    {
+        radius = r;
+    }
+    //OVERLOADING is the strategy of two things with the same name
+    //but differnt data types amounts of arguements
+    //With Mr. T constuctors are NOT methods
+    //constructors have the same name as the class
+    //constrictors have no return type
+    
+    //this is a GETTER or accessor method
+    public double getradius()
+    {
+        return radius;
+    }
+    
+    //this is a SETTER or modifer or mutator method
+    public void setRadius(double r)
+    {
+        radius = r;
+    }
+}
