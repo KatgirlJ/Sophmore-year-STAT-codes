@@ -1,0 +1,17 @@
+//Katrinna Jones
+//Programming II
+import java.util.Scanner;
+public class ExperienceToLevel
+{
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner(System.in); 
+        double experience;
+        double level;
+        
+        System.out.println("What level are you?");
+        level = input.nextDouble();
+        
+        experience= level*level* (150-level)/(100.42);
+        System.out.println ("Experience to next level: " + (int) experience);
+    }
