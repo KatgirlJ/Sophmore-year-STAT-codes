@@ -1,0 +1,44 @@
+//Katrinna Jones
+//Programming II
+import java.util.Scanner;
+import java.text.NumberFormat;
+public class Change
+{
+    public static void main (String[] args)
+    {
+     Scanner input = new Scanner(System.in); 
+     int change;
+     change = 0;
+     int quarters;
+     quarters = 0;
+     int dimes;
+     dimes = 0;
+     int nickels;
+     nickels = 0;
+     int pennies;
+     pennies = 0;
+     int changequarters;
+     changequarters = 0;
+     int changedimes;
+     changedimes = 0;
+     int changenickels; 
+     changenickels = 0;
+     int changepennies;
+     changepennies = 0;
+     quarters = 25;
+     dimes = 10;
+     nickels = 5;
+     pennies = 1;
+     System.out.println ("Enter the change: ");
+     change = input.nextInt();
+     System.out.println("The minimum number of coins is: "); 
+     changequarters = change / quarters;
+     System.out.println ("Quarters: " + changequarters);
+     changedimes = (change % quarters) / dimes;
+     System.out.println ("Dimes: " + changedimes);
+     changenickels = ((change % quarters) % dimes) / nickels;
+     System.out.println ("Nickels: " +changenickels);
+     changepennies = ((((change % quarters) % dimes) % nickels) / pennies);
+     System.out.println ("Pennies: " +changepennies);
+    }
+}
