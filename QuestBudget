@@ -1,0 +1,48 @@
+
+//Katrinna Jones
+//Programming II
+import java.util.Scanner;
+import java.text.NumberFormat;
+public class QuestBudget
+{
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner(System.in); 
+        double weapons;
+        weapons = 0;
+        double armor;
+        armor = 0;
+        double magic;
+        magic = 0;
+        double items;
+        items = 0;
+        double minutes;
+        minutes = 0;
+        double total; 
+        total = 0;
+        NumberFormat percent = NumberFormat.getPercentInstance();
+        System.out.println("Enter the number of minutes you want your allies to search for: ");
+        
+        System.out.println("Weapons: " + weapons);
+        weapons = input.nextInt();
+        System.out.println("Armor: " + armor);
+        armor = input.nextInt();
+        System.out.println("Magic: " + magic);
+        magic = input.nextInt();
+        System.out.println ("Items: " + items);
+        items = input.nextInt();
+        
+        armor = armor/total;
+        magic= magic/total;
+        items =items/total;
+        total = weapons + armor + magic + items;
+        
+        System.out.println("Loot        % Time");
+        System.out.println("------------------");
+        weapons = weapons/total;
+        System.out.println("Wepons      " + (percent.format(weapons)));
+        System.out.println("Armor       " + (percent.format(armor)));
+        System.out.println("Magic       " + (percent.format(magic)));
+        System.out.println("Items       " + (percent.format(items)));
+    }
+}
