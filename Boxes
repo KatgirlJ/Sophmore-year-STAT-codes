@@ -1,0 +1,95 @@
+//Katrinna Jones
+//Programming II
+public class Boxes
+{
+    public static void main (String[] args)
+    {
+        makeABox(); //this is easir to read as a human
+        makeABox();//this method is reusable
+        
+        System.out.println();
+        makeABox(13); //this is a method CALL with an ARGUMENT
+        //we are PASSING the 13 to our METHOD
+        System.out.println();
+        makeABox(7,5);
+        makeABox(15,20,'!');
+        System.out.println(findArea(10,20));
+        System.out.println(Math.pow(findArea(2,5)));
+    }
+    
+    public static void makeABox() //this is a method header
+    //public is the ACCESS LEVEL. our options are public or privite
+    //public means the method can be used by other classes
+    //private means the method can be used ONLY by this class
+    //in this course, methods should always be public
+    
+    //the static keyword makes this a CLASS METHOD
+    //this allows it to be called from the class itself
+    //instead of from an object
+    
+    //void is the RETURN TYPE of the method 
+    //this is similar to the data type of a variable
+    //void means the method returns nothing
+    
+    //makeABox() is the method name
+    //all methods have () on them always
+    //regardless of if they have parameters or not
+    //a good method name does what it say. Methods are verbs
+    //continue following naming conventions and using camelCase
+    
+    {
+        for(int x = 0;x < 5;x++)
+        {
+            System.out.println("*****");
+        }
+    }
+    
+    public static void makeABox(int side) //side is a method PARAMETER
+    //you must declare each parameter with a data type
+    {
+        for(int x = 0;x < side;x++)
+        {
+            for(int y = 0; y < side;y++)
+            {
+                System.out.println("*");
+            }
+            System.out.println();
+        }
+    }
+    
+    public static void makeABox(int length, int width)
+    {
+        for(int x = 0;x < length;x++)
+        {
+            for(int y = 0; y < width;y++)
+            {
+                System.out.println("*");
+            }
+            System.out.println();
+        }
+    }
+    public static void makeABox(int l, int w,char let)
+    {
+        for(int x = 0;x < l;x++)
+        {
+            for(int y = 0; y < w;y++)
+            {
+                System.out.println(let);
+            }
+            System.out.println();
+        }
+    }
+    
+    //the stratagy of OVERLOADING lets us have methods of the name name
+    //if you write these methods they must have parameters of differnt amounts 
+    //data types
+    
+    //a return method has a non void data type
+    //the method must return the specified value or it breaks
+    
+    public static int findArea(int length, int width)
+    {
+        return length * width; //you must return the speified data type
+    }
+    //return methods generally do NOT have System.out.print
+}
