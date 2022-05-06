@@ -1,0 +1,31 @@
+//Katrinna Jones
+//Programming II
+public class Coin
+{
+    private boolean FlipCoin;
+    //(int)(1 + (Math.random() * 2));
+    public void FlipCoin()
+    {
+        int Coin = (int)(1 + (Math.random() * 2));
+        
+        if(Coin == 1) //heads
+        {
+            FlipCoin = true;
+        }
+        else //tails
+        {
+            FlipCoin = false;
+        }
+    }
+    public String toString()
+    {
+        if(FlipCoin == true)
+        {
+            return "You got heads";
+        }
+        else
+        {
+            return "You got tails";
+        }
+    }
+}
