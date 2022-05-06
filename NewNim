@@ -1,0 +1,72 @@
+import java.util.Scanner;
+public class Nim
+{
+	public static void main(String args[])
+	{
+    	Scanner input = new Scanner(System.in);
+    	int totalStones = (int)(15 + (Math.random() * 16));
+    	int draw = 0, computerDraw = 0;
+    	while (totalStones > 0)
+    	{
+        	System.out.println("There are "+totalStones+ " stones left in the pile");
+        	System.out.println("How many stones do you want to draw between 1 and 3?");
+        	draw = input.nextInt();
+        	if (isValidEntry(draw, totalStones) == false)
+        	{
+            	System.out.println("Sorry, that is not a valid entry.");
+        	}
+        	else
+        	{
+            	totalStones = (totalStones - draw);
+            	System.out.print("you took "+draw+" stones");
+            	if(totalStones == 0)
+            	{
+                	System.out.print("\n The Player Wins!");
+            	}
+            	else
+            	{
+                	computerDraw = drawStones(totalStones, computerDraw);
+                	System.out.println(" and the CPU took "+computerDraw+" stones.");
+                	totalStones -= computerDraw;
+                	if (totalStones == 0)
+                	{
+                    	System.out.println("The CPU Wins!");
+                	}
+            	}
+        	}
+    	}
+	}
+
+	public static boolean isValidEntry(int draw, int totalStones)
+	{
+    	if (draw < 1 || draw > 3 || draw > totalStones)
+    	{
+        	return false;
+    	}
+    	else
+    	{
+        	return true;
+    	}
+	}
+
+	public static int drawStones(int totalStones, int computerDraw)
+	{
+    	if (totalStones >= 3)
+    	{
+        	computerDraw = (int)(1 + (Math.random() * 3));
+        	return computerDraw;
+    	}
+    	else if (totalStones == 2)
+    	{
+        	computerDraw = (int)(1 + (Math.random() * 2));
+        	return computerDraw;
+    	}
+    	else
+    	{
+        	computerDraw = 1;
+        	return computerDraw;
+    	}
+	}
+}
+© 2022 GitHub, Inc.
+Terms
