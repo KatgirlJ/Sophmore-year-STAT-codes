@@ -1,0 +1,42 @@
+//Katrinna Jones
+//Programming II
+import java.util.Scanner;
+public class RandomGame
+{
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner (System.in);
+        
+        int number = (int)(Math.random() * 50 + 1);
+        int guess = 0;
+        int compguess = (int)(Math.random() * 50 + 1); // computer guess
+        
+        System.out.println ("I am thinking of a number from 1 to 50...");
+        guess = input.nextInt();
+        System.out.println("Player Guess: " + guess);
+        
+
+        if (guess < 1 || guess > 50) 
+        {
+            System.out.println("Follow directions next time");
+        }
+        else if (Math.abs(number - compguess) < (number - guess))
+        {
+            System.out.println ("Computer Guess:" + compguess);
+            System.out.println("The number was " + number);
+            System.out.println ("Computer wins");
+        }
+        else if (Math.abs(number - compguess) > (number - guess))
+        {
+            System.out.println ("Computer Guess:" + compguess);
+            System.out.println("The number was " + number);
+            System.out.println ("Player wins");
+        }
+        else 
+        {
+            System.out.println ("Computer Guess:" + compguess);
+            System.out.println("The number was " + number);
+            System.out.println ("Player and Computer wins");
+        }
+    }
+}
