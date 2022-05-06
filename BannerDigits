@@ -1,0 +1,35 @@
+//Katrinna Jones
+//Programming II
+import java.util.Scanner;
+public class BannerDigits
+{
+        public static void main (String[] args)
+        {
+            Scanner input = new Scanner(System.in); 
+            int digitone;
+            digitone = 0;
+            int digittwo;
+            digittwo = 0;
+            int digitthree;
+            digitthree = 0;
+            int number;
+            number = 0;
+            digitone = 100;
+            digittwo = 10;
+            digitthree = 1;
+            System.out.println("Enter a three-digit number: ");
+            number = input.nextInt();
+            
+            System.out.println("|---|");
+            System.out.println("| " + number/digitone + " |");
+            System.out.println("|  " + " |");
+            System.out.println("| " + number%digitone/digittwo + " |");
+            System.out.println("|  " + " |");
+            System.out.println("| " + number%digittwo + " |");
+            System.out.println("|--" + "-|");
+            System.out.println("|  ");
+            System.out.println("|  ");
+            System.out.println("|  ");
+            System.out.println("|  ");
+        }
+}
