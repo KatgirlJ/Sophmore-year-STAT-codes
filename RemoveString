@@ -1,0 +1,41 @@
+//Katrinna Jones
+//Programming II
+import java.util.Scanner;
+public class RemoveString
+{
+    public static void main (String[] args)
+    {
+        Scanner input = new Scanner(System.in);
+        String sentence = " ";
+        String string = " ";
+        
+        System.out.println("Enter a sentence: ");
+        sentence = input.nextLine();
+        System.out.println("Enter a string: ");
+        string = input.nextLine();
+        
+        for(int word = 0; word > -1; word = sentence.indexOf(string))
+        {
+            word = sentence.indexOf(string);
+            
+            int length = string.length() + word;
+            int senLength = sentence.length();
+            String first = " ";
+            String second = " ";
+            if(0 == word)
+            {
+                word = word - 1;
+                first = sentence.substring(length, senLength);
+            }
+            else
+            {
+                word = word - 1;
+                first = sentence.substring(0,word);
+                second = sentence.substring(length, senLength);
+            }
+            
+            sentence = first + second;
+        }
+        System.out.println(sentence);
+    }
+}
