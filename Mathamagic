@@ -1,0 +1,32 @@
+//Katrinna Jones 
+//Programming II
+public class Mathamagic
+{
+    public static void main(String[] args) 
+    {
+        System.out.println("7 + 6 =" + 7 + 6);
+        // this is conctenation, NOT MATH
+        
+        System.out.println("7 + 6 = " + (7 + 6)); //13
+        System.out.println("7 - 6 = " + (7 - 6));
+        System.out.println("7 * 6 = " + (7 * 6));
+        System.out.println("7 / 6 = " + (7 / 6)); 
+        
+        // when you use / symbol, you are doing integer division
+        // It is how many times the denominator goes in the numerator
+        
+        System.out.println ("7 % 6 =" + (7 % 6));
+        // when you use a % symbol you're doing modular division
+        // it is the remander of what is left after integer divison
+        
+        
+        System.out.println("7. + 6. =" + (7. + 6.));
+        System.out.println("7. - 6. =" + (7. - 6.));
+        System.out.println("7. * 6. =" + (7. * 6.));
+        System.out.println("7. / 6. =" + (7. / 6.));
+        
+        System.out.println();
+        
+    }
+}
+    
