@@ -1,0 +1,30 @@
+//Katrinna Jones
+//Programming II
+import java.util.Scanner;
+//Katrinna Jones
+//Programming II
+public class DigitDisplay
+{
+    public static void main (String[] args)
+    {
+        Scanner input = new Scanner(System.in); 
+        int number = 0;
+        int x = 1;
+        int divisor = 10;
+        int divisor2 = 10;
+          
+        System.out.println("Enter a positive integer");
+        number = input.nextInt();
+        int length = (int) (Math.log10(number) + 1);
+        int digit1 = number % 10;
+        System.out.println(digit1);
+          
+        while(x < length)
+        {
+            x++;
+            divisor = divisor * 10;
+            System.out.println(number % divisor / divisor2);
+          divisor2 = divisor2 * 10;
+        }
+    }
+}
