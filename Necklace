@@ -1,0 +1,27 @@
+//Katrinna Jones
+//Programming II
+import java.util.Scanner;
+public class Necklace //keep your head up
+{
+    public static void main (String[] args)
+    {
+        Scanner input = new Scanner (System.in);
+        int first = 0;
+        int second = 0;
+        int sequance = 0;
+        int sequance2 = 0;
+        
+        System.out.println("Enter first number in the sequence: ");
+        first = input.nextInt();
+        System.out.println("Enter second number in the sequence:");
+        second = input.nextInt(); 
+        System.out.print(first + " " + second + " ");
+        sequance = first + second;
+        System.out.print(sequance + " ");
+        while (second == first)
+        {
+            sequance2 = sequance + sequance2;
+            System.out.print(sequance2 + " ");
+        }
+    }
+}
