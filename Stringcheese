@@ -1,0 +1,91 @@
+//Katrinna Jones
+//Programming II
+import java.util.Scanner;
+public class Stringcheese
+{
+    public static void main (String[] args)
+    {
+        Scanner input = new Scanner(System.in);
+        System.out.println("It's Fall Ya'll");
+        //This green stuff is a String. This is a literal
+        
+        int a;      //these are red becayse they are primative
+        double b;
+        char c;
+        String pie; //String is not a primitive data type it is abstract
+        //we could also say that pie is a String object
+        
+        String pie1 = "pumpkin";
+        System.out.println(pie1);
+        System.out.println(pie1.length()); //returns # of char in String
+        String pie2 = "apple";
+        int x = pie2.length()%2;    //.length() returns an int
+        System.out.println(x);
+        //System.out.println(String.length()); this doesn't work
+        
+        //Strings are IMMUTABLE, so they will not change unless 
+        //you store new information over them
+        String pie3 = "Sweet Potato";
+        System.out.println(pie3);
+        System.out.println(pie3.toLowerCase());
+        System.out.println(pie3.toUpperCase());
+        System.out.println(pie3);
+        pie3 = pie3.toUpperCase();
+        System.out.println(pie3);
+        
+        String pie4 ="          blue berry  ";
+        System.out.println(pie4);
+        System.out.println(pie4.trim());
+        //trim() removes leading and trailing spaces
+        System.out.println(pie4.length());
+        System.out.println(pie4.trim().length());
+        
+        String pie5 = new String("pecan"); //formal way to declare strings
+        String pie6 = new String("pecan");
+        System.out.println(pie5 == pie6);
+        //you CANNOT use == to test String equality
+        //you MUST use the .equals() method
+        System.out.println(pie5.equals(pie6));
+        
+        String name = " "; //this is the empty String
+        System.out.println("What is your name? ");
+        name = input.nextLine();
+        System.out.print(name + ", what pie do you want?");
+        pie = input.nextLine();
+        System.out.println("We do not have any " + pie + " pie.");
+        //for String input use .next() or .nextLine()
+        //if one doesn't work use the other one
+        
+        pie = "Key Lime";
+        //the charAt() method
+        //charAt() requires qn int arguement and returns a char
+        System.out.println(pie.charAt(0)); //K
+        //System.out.println(pie.charAt(89)); Out of bounds expectation
+        System.out.println(pie.charAt(3)); //
+        System.out.println(pie.charAt(6));//m
+        System.out.println(pie.charAt(pie.length()-1)); //last letter
+        //the indexOf() method tells us where charecters are in a String
+        //indexOf() requaires a String or char arguement and returns an int
+        System.out.println(pie.indexOf('y'));//char arguement
+        System.out.println(pie.indexOf(" "));//String arguement
+        System.out.println(pie.indexOf("me"));
+        System.out.println(pie.indexOf("e"));//returns first occurance
+        System.out.println(pie.lastIndexOf("e"));//last occurance 
+        System.out.println(pie.indexOf("x"));//returns -1
+        
+        //substring() gives you access to a smaller string inside a Sting
+        //substring requires 1 or 2 int arguement and returns a String
+        pie = "Strawberry Rhubarb Pie";
+        //substring with 1 arguement starts at that index and goes to the end 
+        System.out.println(pie.substring(11));
+        //substring with 2 argyements starts at the 1st arguement
+        //abd goes up to but DOES NOT INCLUDE the 2nd arguement
+        System.out.println(pie.substring(0,10));
+        System.out.println(pie.substring(0,10) +pie.substring(19));
+        
+        //String let = pie.charAt(7); you can't store a char into a string
+        
+        //you have to concatenate a char onto a String
+        String let = " " + pie.charAt(7);
+    }
+}
