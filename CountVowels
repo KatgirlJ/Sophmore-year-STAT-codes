@@ -1,0 +1,28 @@
+public class CountVowels
+{ public static void main (String[] args)
+    {
+        Scanner input = new Scanner (System.in);
+
+        String text = "";
+        int length = 0;
+        int numberOf = 0;
+       
+        System.out.print("Enter text: ");
+        text = input.nextLine();
+        text = text.toLowerCase();
+        length = text.length();
+
+        while (length > 0)
+        {
+            if(text.substring(0,1).equals("a") || text.substring(0,1).equals("e") ||text.substring(0,1).equals("i")||text.substring(0,1).equals("o")||text.substring(0,1).equals("u"))
+            {
+                numberOf++;
+            }
+            text = text.substring(1);
+            length = text.length();
+        }
+        System.out.print("The number of vowels in your string is "+ numberOf);
+       
+        //the test words are--- Admiral Ackbar is orange and understands traps = 14
+    }
+}
