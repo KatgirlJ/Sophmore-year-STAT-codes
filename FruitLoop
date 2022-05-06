@@ -1,0 +1,48 @@
+//Katrinna Jones
+//Programming II
+public class FruitLoop
+{
+    public static void main (String[] args)
+    {
+        //      START   STOP    CHANGE
+        for(int x = 1; x<= 10; x++)
+        {
+            System.out.println(x);
+        }
+        //START this is our initsl condition, the first value in the loop
+        //STOP boolean expression loop runs while this is true
+        //CHANGE this iterates the loop by changing the varable
+        
+        //System.out.println(x); does not work
+        //x is only defined for the duration of the loop
+        
+        int age = 37;
+        int y = 92134;
+        
+        for(y = 10; y > 0; y--) //modify your var however you want
+        {
+            age -=y; //age = age - y
+        }
+        
+        System.out.println(age);
+        
+        int sum = 0; // this is an accumlator
+        
+        for(int x = 2; x <= 20;x += 2) // Same as x = x + 2
+        {
+            sum = sum + x; //sum += x
+        }
+        
+        System.out.println(sum);
+        
+        for(int i = 2; i < 0; i = i * 7) //bad conditions skip loop
+        {
+            System.out.println(i);
+        }
+        
+        for (int i = 2; i > 0; i = i) // worse conditions create infinie loops
+        {
+            System.out.println(i);
+        }
+    }
+}
