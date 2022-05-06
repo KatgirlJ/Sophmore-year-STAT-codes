@@ -1,0 +1,25 @@
+//Katrinna Jones
+//Programming II
+import java.util.Scanner;
+public class RandomPass
+{
+  public static void main (String[] args)
+  {
+      Scanner input = new Scanner (System.in);  
+      int length = 0;
+      int x = 0;  
+      System.out.println("Password length? ");
+      length = input.nextInt();
+
+      while (length >= x) 
+      {
+        int pass = (int)(Math.random() * 126 + 33);
+        if (length == 0)
+        {
+            break;
+        }
+        x++;
+        System.out.print ((char)(pass));
+      }
+  }
+}
