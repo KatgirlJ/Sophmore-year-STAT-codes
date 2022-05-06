@@ -1,0 +1,31 @@
+//Katrinna Jones
+//Programming II
+import java.util.Scanner;
+public class Username 
+{
+    public static void main (String[] args)
+    {
+        Scanner input = new Scanner(System.in);
+        String username = " ";
+        
+        do
+        {
+            System.out.println("Enter a username: ");
+            username = input.nextLine();
+            if(username.trim().length() <= 8)
+            {
+                System.out.println("That username is too short. ");
+            }
+            else if(username.trim().length() >= 13)
+            {
+                System.out.println("That username is too long. ");
+            }
+            else
+            {
+                System.out.println("Thank you for joining, " + username);
+                break;
+            }
+        }
+        while(username.trim().length()>= 8 && username.trim().length() <= 13);
+    }
+}
