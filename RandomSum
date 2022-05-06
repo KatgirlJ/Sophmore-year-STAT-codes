@@ -1,0 +1,24 @@
+//Katrinna Jones
+//Programming II
+import java.util.Scanner;
+public class RandomSum
+{
+    public static void main (String[] args)
+    {
+        Scanner input = new Scanner (System.in);
+        int iterations;
+        System.out.println ("How many iterations? ");
+        iterations = input.nextInt();
+        System.out.println("Num1    Num2    Sum");
+        int x = 0;
+        int y = 0;
+        while (x < iterations)
+        {
+            int num = (int)(Math.random() * 255 + 0);
+            int num2 = (int)(Math.random() * 255 + 0);
+            x++;
+            y = num + num2;
+            System.out.println(num + "\t" + num2 + "\t" + y);
+        }
+    }
+}
