@@ -1,70 +1,78 @@
+//Katrinna Jones
+//Programming II
 import java.util.Scanner;
 public class Nim
 {
-	public static void main(String args[])
-	{
-    	Scanner input = new Scanner(System.in);
-    	int totalStones = (int)(15 + (Math.random() * 16));
-    	int draw = 0, computerDraw = 0;
-    	while (totalStones > 0)
+    public static void main (String[] args)
+    {
+        Scanner input = new Scanner (System.in);
+        int stones = (int)(Math.random() * (30 + 15));
+        int computer = 0;
+        int winner = 0;
+        boolean incorrect = false;
+        while(stones > 0)
+        {
+            int human;
+            System.out.println("Please take 1 2 or 3 stones from the pile");
+            human = input.nextInt();
+            isValidEntry(human,stones,incorrect);
+            if (incorrect = true)
+            {
+                human = input.nextInt();
+            }
+            stones = stones - human;
+            if(stones == 0)
+            {
+                    System.out.println("Computer wins");
+            }
+            computer = drawStones(computer,stones);
+            System.out.println("Computer has taken " + computer + " stones");
+            stones = stones - computer; 
+            if(stones == 0)
+            {
+                    System.out.println("Human wins");
+            }
+            System.out.println("There are " + stones + " left");
+        }
+        }
+    public static int drawStones(int stones,int computer)
+    {
+        if (stones >= 3)
     	{
-        	System.out.println("There are "+totalStones+ " stones left in the pile");
-        	System.out.println("How many stones do you want to draw between 1 and 3?");
-        	draw = input.nextInt();
-        	if (isValidEntry(draw, totalStones) == false)
-        	{
-            	System.out.println("Sorry, that is not a valid entry.");
-        	}
-        	else
-        	{
-            	totalStones = (totalStones - draw);
-            	System.out.print("you took "+draw+" stones");
-            	if(totalStones == 0)
-            	{
-                	System.out.print("\n The Player Wins!");
-            	}
-            	else
-            	{
-                	computerDraw = drawStones(totalStones, computerDraw);
-                	System.out.println(" and the CPU took "+computerDraw+" stones.");
-                	totalStones -= computerDraw;
-                	if (totalStones == 0)
-                	{
-                    	System.out.println("The CPU Wins!");
-                	}
-            	}
-        	}
+            computer = (int)(1 + (Math.random() * 3));
+            return computer;
     	}
-	}
-
-	public static boolean isValidEntry(int draw, int totalStones)
-	{
-    	if (draw < 1 || draw > 3 || draw > totalStones)
+    	else if (stones == 2)
     	{
-        	return false;
-    	}
-    	else
-    	{
-        	return true;
-    	}
-	}
-
-	public static int drawStones(int totalStones, int computerDraw)
-	{
-    	if (totalStones >= 3)
-    	{
-        	computerDraw = (int)(1 + (Math.random() * 3));
-        	return computerDraw;
-    	}
-    	else if (totalStones == 2)
-    	{
-        	computerDraw = (int)(1 + (Math.random() * 2));
-        	return computerDraw;
+            computer = (int)(1 + (Math.random() * 2));
+            return computer;
     	}
     	else
     	{
-        	computerDraw = 1;
-        	return computerDraw;
-    	}
-	}
+    	   computer = 1;
+    	   return computer;
+        }
+    }
+    public static void isValidEntry(int human,int stones,boolean incorrect)
+    {
+        if(human > 3)
+        {
+            System.out.println("This is an invalid attempt please put in a number from 1-3");
+            incorrect = true;
+        }
+        else if(human < 1)
+        {
+            System.out.println("This is an invalid attempt please put in a numer from 1-3");
+            incorrect = true;
+        }
+        else if(stones < human)
+        {
+            System.out.println("invalid attempt");
+            incorrect = true;
+        }
+        else
+        {
+            incorrect = false;
+        }
+    }
 }
