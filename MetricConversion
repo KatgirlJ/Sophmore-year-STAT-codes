@@ -1,0 +1,53 @@
+//Katrinna Jones
+//Programming II
+import java.util.Scanner;
+public class MetricConversion
+{
+  public static void main (String[] args)
+  {
+    double number 
+    double choice = 0;
+    double feet = 0;
+    double centi = 0;
+    double yards = 0;
+    double meters = 0;
+    double miles = 0;
+    double kilo = 0;
+    
+    System.out.println("Enter a number: ");
+    number = input.nextDouble();
+    System.out.println("Convert: ");
+    System.out.println("1.  Inches to Centimeters   5. Centimeters to Inches");
+    System.out.println("2.  Feet to Centimeters  6. Centimeters to Feet ");
+    System.out.println("3.  Yards to Meters    7. Meters to Yards ");
+    System.out.println("4.  Miles to Kilometers  8. Kilometers to Miles ");
+    System.out.println("Enter your choice: ");
+    number = input.nextInt();
+    
+    if(choice == 1)
+    {
+      inchtocenti(number, centi);
+    }
+    else if(choice == 2)
+    {
+      feettocenti(number,centi)
+    }
+   else if(choice == 3)
+   {
+      yardtometi(number meter);
+   }
+  }
+  public static void inchtocenti(double inches,double centi)
+  {
+    return inches * 2.54;
+  }
+  public static void feettocenti(double feet, double centi);
+  {
+    return feet * 30.48;
+  }
+  public static void yardtometi(double yard,double meter);
+  {
+    return yard * .9144;
+  }
+  public static void
+}
