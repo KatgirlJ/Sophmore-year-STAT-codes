@@ -1,0 +1,20 @@
+//Katrinna Jones
+//Programming II
+import java.util.Scanner;
+public class Moniker
+{
+    public static void main(String[] args) 
+    {
+        Scanner input = new Scanner(System.in); 
+        char first ='a';
+        char second = 'b';
+        char third= 'c';
+        System.out.println("What is your first initial?");
+        first = input.next().charAt(0);
+        System.out.println("What is your last initial?");
+        second = input.next().charAt(0);
+        System.out.println("Oops, we forgot to ask for your middle initial!");
+        third = input.next().charAt(0);
+        System.out.println("Your moniker is " + first + third + second);
+    }
+}
