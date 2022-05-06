@@ -1,0 +1,44 @@
+//Katrinna Jones
+//Programming II
+import java.util.Scanner;
+public class BasketballTeam
+{
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner (System.in);
+        int years = 18;
+        int tall = 0;
+        System.out.println("How old are you (in years)?");
+        years = input.nextInt();
+        System.out.println("How tall are you (in inches)?");
+        tall = input.nextInt();
+        if (tall <= 74 && years <= 15)
+        {
+            System.out.println("Sorry,you are too young and short");
+        }
+        else if (years <= 15 && years >= 1)
+        {
+            System.out.println ("Sorry, you are too young");
+        }
+        else if (tall < 74 && tall <= 107)
+        {
+            System.out.println("Sorry, you are too short");
+        }
+        else if (tall <= 74 && years <= 15)
+        {
+            System.out.println("Sorry,you are too young and short");
+        }
+        else if (years <= 0)
+        {
+            System.out.println ("That does't seem right. Try again.");
+        }
+        else if (tall >= 108)
+        {
+            System.out.println ("That does't seem right. Try again.");
+        }
+        else 
+        {
+            System.out.println ("Congrats you're eligible for the team");
+        }
+    }
+}
