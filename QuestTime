@@ -1,0 +1,18 @@
+//Katrinna Jones
+//Programming II
+import java.util.Scanner;
+public class QuestTime
+{
+    public static void main (String[] args)
+    {
+        Scanner input = new Scanner(System.in); 
+        int time;
+        int hours;
+        int minutes;
+        System.out.println ("How long do you want your ally to search? ");
+        time = input.nextInt();
+        hours = time/60;
+        minutes = time % 60;
+        System.out.println ("The quest will take " + hours + " hours and " + minutes + " minutes to complete");
+    }
+}
