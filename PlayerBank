@@ -1,0 +1,29 @@
+
+//Katrinna Jones
+//Programming II
+import java.util.Scanner;
+import java.text.NumberFormat;
+public class PlayerBank
+{
+    public static void main (String []args)
+    {
+        Scanner input = new Scanner(System.in); 
+        double value;
+        value = 0;
+        double deposit;
+        deposit = 0;
+        double intrestrate;
+        intrestrate = .025;
+        double days;
+        days = 0;
+        NumberFormat money = NumberFormat.getCurrencyInstance();
+        System.out.println ("How much will you deposit? ");
+        deposit = input.nextInt();
+        System.out.println ("How many days will you wait? ");
+        days = input.nextInt();
+        
+        value = deposit * (1 + days * intrestrate);
+        
+        System.out.println (" The final value will be : " + (money.format(value)));
+    }
+}
