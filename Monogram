@@ -1,0 +1,23 @@
+//Katrinna Jones
+//Programming II
+import java.util.Scanner;
+public class Monogram
+{
+    public static void main (String[] args)
+    {
+        Scanner input = new Scanner(System.in);
+        String first = " ";
+        String middle = " ";
+        String last = " ";
+        
+        System.out.println("Enter your first name: ");
+        first = input.nextLine();
+        System.out.println("Enter your middle name: ");
+        middle = input.nextLine();
+        System.out.println("Enter your last name: ");
+        last = input.nextLine();
+        System.out.print(first.toLowerCase().charAt(0));
+        System.out.print(last.toUpperCase().charAt(0));
+        System.out.print(middle.toLowerCase().charAt(0));
+    }
+}
