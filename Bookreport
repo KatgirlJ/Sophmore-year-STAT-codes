@@ -1,0 +1,48 @@
+//Katrinna Jones
+//Programming II
+import java.util.Scanner;
+public class Bookreport
+{
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner (System.in);
+        int Animalfarm = 25000;
+        int Whitefang = 70000;
+        int mockingbird = 100000;
+        int watership = 150000;
+        int mobydick = 200000;
+        int warpeace = 0;
+        int words = 0;
+        System.out.println ("How many words are you willing to read?");
+        words = input.nextInt();
+        
+        if (words <= 100000 && words >= 150000)
+        {
+            System.out.println ("You have been assigned " + " To kill a Mokingbird");
+        }
+        else if (words >= 25000 && words < 70000)
+        {
+            System.out.println ("You have been assigned " + " Animal Farm");
+        }
+        else if (words >= 70000 && words < 100000)
+        {
+            System.out.println ("You have been assigned " + " Whitefang");
+        }
+        else if (words >= 150000 && words < 200000)
+        {
+            System.out.println ("You have been assigned " + " Watership Down");
+        }
+        else if (words >= 200000)
+        {
+            System.out.println ("You have been assigned " + " Mody Dick");
+        }
+        else if ( words < 25000)
+        {
+            System.out.println ("You have been assigned War and Peace");
+        }
+        else 
+        {
+            System.out.println ("Strange input");    
+        }
+    }
+}
