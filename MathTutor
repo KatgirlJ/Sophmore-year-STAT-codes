@@ -1,0 +1,46 @@
+//Katrinna Jones
+//Programming II
+import java.util.Scanner;
+public class MathTutor
+{
+    public static void main (String[] args)
+    {
+        Scanner input = new Scanner (System.in);
+        int question = (int)(Math.random() * 10 + 1);
+        int question2 = (int)(Math.random() * 10 + 1);
+        int symbol = (int)(Math.random() * 4 + 1);
+        double correct;
+        double humans;
+        
+        if (symbol == 1)// +
+        {
+            System.out.println("What is " + question + " + " + question2);
+            correct = question + question2;
+        }
+        else if (symbol == 2) // *
+        {
+            System.out.println("What is " + question + " * " + question2);
+            correct = question * question2;
+        }
+        else if (symbol == 3) // /
+        {
+            System.out.println("What is " + question + " / " + question2);
+            correct = question / question2;
+        }
+        else // - 
+        {
+            System.out.println("What is " + question + " - " + question2);
+            correct = question - question2;
+        }
+        
+        humans = input.nextDouble();
+        if (humans == correct)
+        {
+            System.out.println ("Correct!");
+        }
+        else
+        {
+            System.out.println ("Wrong! it's " + correct);
+        }
+    }
+}
