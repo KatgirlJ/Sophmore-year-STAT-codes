@@ -1,0 +1,39 @@
+//Katrinna Jones
+//Programming II
+import java.text.NumberFormat;
+public class LunchOrder
+{
+    private double total;
+    private int user;
+    NumberFormat money = NumberFormat.getCurrencyInstance();
+    public LunchOrder()
+    {
+        total = 0.00;
+    }
+    public void hamburgers()
+    {
+        double hamburgers = 1.85;
+        hamburgers = 1.85;
+        total = total + user * hamburgers;
+    }
+    public void salads(double salcost)
+    {
+        System.out.println("Each salad has 1.0g of fat, 11.0g of carbs, and 5.0g of fiber.");
+        salcost = 2.00;
+        total = total + user * salcost;
+    }
+    public void fries(double fricost)
+    {
+        System.out.println("Each french fry has 11.0g og fat, 36.0g of carbs, and 4.0g of fiber");
+        fricost = 1.30;
+        total = total + user * fricost;
+    }
+    public void sodas(int sodacost)
+    {
+        System.out.println("Each number has 0.0g of fat, 38.0g of carbs, and 0.0g of fiber");
+    }
+    public String total()
+    {
+        return "Your oder comes to: " + (money.format(total));
+    }
+}
