@@ -1,0 +1,34 @@
+//Katrinna Jones
+//Programming II
+import java.util.Scanner;
+public class IndyFilms
+{
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner (System.in);
+        int year = 0;
+        System.out.println("Input a year: ");
+        year = input.nextInt();
+        
+        if (year >= 1981 && year < 1984)
+        {
+            System.out.println ("The last Indy Film to come out was Raiders Of The Lost Ark");
+        }
+        else if (year >= 1984 && year < 1989)
+        {
+            System.out.println ("The last Indy Film to come out was Indiana Jones and the Temple of Doom");
+        }
+        else if (year >= 1989 && year < 2008)
+        {    
+            System.out.println ("The last Indy Film to come out was Indiana Jones and the Last Crusade");
+        }
+        else if (year >= 2008)
+        {
+            System.out.println ("The last Indy Film to come out was Indiana Jones and the Kingdom of the Crystal Skull");
+        }
+        else
+        {
+            System.out.println ("No Indiana Jones...yet.");
+        }
+    }
+}
