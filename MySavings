@@ -1,0 +1,47 @@
+
+//Katrinna Jones
+//Programming II
+import java.util.Scanner;
+public class MySavings
+{
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner(System.in); 
+        PiggyBank MrsPiggy = new PiggyBank();
+        int user = 0;
+        
+        do
+        {
+            
+            System.out.println("1.  Show total in bank.");
+            System.out.println("2.  Add penny.");
+            System.out.println("3.  Add a nickel");
+            System.out.println("4.  Add a dime");
+            System.out.println("5.  Add a quarter");
+            System.out.println("6.  Take money ");
+            System.out.println("Enter 0 quit.");
+            user = input.nextInt();
+            if(user == 1)
+            {
+                MrsPiggy.toSting();
+            }
+            else if (user == 2)
+            {
+                MrsPiggy.addpenny();
+            }
+            else if(user == 3)
+            {
+                MrsPiggy.addnickel();
+            }
+            else if (user == 4)
+            {
+                MrsPiggy.adddime();
+            }
+            else if (user == 5)
+            {
+                MrsPiggy.addquarter();
+            }
+        }
+        while(user == -1);
+    }
+}
