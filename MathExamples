@@ -1,0 +1,20 @@
+//Katrinna Jones
+//Programming II
+public class MathExamples
+{
+    public static void main(String[] args)
+    {
+        System.out.println("pi =" + (Math.PI));
+        System.out.println("5^4 =" + (5^4));
+        
+        System.out.println("5^2 = " + Math.pow(5,2));
+        System.out.println("5^3 = " + Math.pow(5,3));
+        System.out.println("5^4 = " + Math.pow(5,4));
+        System.out.println("5^5 = " + Math.pow(5,5));
+        System.out.println("5^6 = " + Math.pow(5,6));
+        
+        System.out.println("root(100)" + Math.sqrt (100));
+        System.out.println("root(81) = " + Math.sqrt (81));
+        System.out.println("root(49) = " + Math.sqrt (49));
+    }
+}
