@@ -1,0 +1,12 @@
+//Katrinna Jones
+//Programming II
+public class OddSum
+{
+    public static void main (String[] args)
+    {
+        for (int odd = 1; odd <= 25; odd = odd + 2)
+        {
+            System.out.println(odd);
+        }
+    }
+}
