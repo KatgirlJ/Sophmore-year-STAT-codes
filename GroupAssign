@@ -1,0 +1,40 @@
+import java.util.Scanner;
+public class GroupAssign
+{ 
+    public static void main (String[] args)
+    {
+        Scanner input = new Scanner (System.in);
+        String name = "";
+       
+       
+
+        System.out.print("Enter your first and last name: ");
+        name = input.nextLine().trim();
+        int find;
+        find = name.indexOf(" ");
+       
+        String nameuse = "";
+        nameuse = name.toLowerCase();
+       
+       
+        if (find != -1)
+        {
+            if (nameuse.substring(find+1,find+2).equals("a")||nameuse.substring(find+1,find+2).equals("b")||nameuse.substring(find+1,find+2).equals("c")||nameuse.substring(find+1,find+2).equals("d")||nameuse.substring(find+1,find+2).equals("e")||nameuse.substring(find+1,find+2).equals("f")||nameuse.substring(find+1,find+2).equals("g")||nameuse.substring(find+1,find+2).equals("h")||nameuse.substring(find+1,find+2).equals("i"))
+            {
+                System.out.print(name + " is assigned to Group 1");
+            }
+            else if (nameuse.substring(find+1,find+2).equals("j")|| nameuse.substring(find+1,find+2).equals("k")||nameuse.substring(find+1,find+2).equals("l")||nameuse.substring(find+1,find+2).equals("m")||nameuse.substring(find+1,find+2).equals("n")||nameuse.substring(find+1,find+2).equals("o")||nameuse.substring(find+1,find+2).equals("p")||nameuse.substring(find+1,find+2).equals("q")||nameuse.substring(find+1,find+2).equals("r")|nameuse.substring(find+1,find+2).equals("s"))
+            {
+                System.out.print(name + " is assigned to Group 2");
+            }
+            else if (nameuse.substring(find+1,find+2).equals("t")|| nameuse.substring(find+1,find+2).equals("u")||nameuse.substring(find+1,find+2).equals("v")||nameuse.substring(find+1,find+2).equals("w")||nameuse.substring(find+1,find+2).equals("x")||nameuse.substring(find+1,find+2).equals("y")||nameuse.substring(find+1,find+2).equals("z"))
+            {
+                System.out.print(name + " is assigned to Group 3");
+            }
+        }
+        else
+        {
+            System.out.print(name + ", please put your last name ");
+        }
+    }
+}
