@@ -1,0 +1,22 @@
+//Katrinna Jones
+//Programming II
+import java.util.Scanner;
+public class DigitTestor
+{
+    public static void main (String[] args)
+    {
+        Scanner input = new Scanner(System.in); 
+        DigitExtractor Digitfinder = new DigitExtractor();
+        int user = number;
+        char human;
+        System.out.println("Enter a three-digit integer: ");
+        user = input.nextInt();
+        
+        if(user >= 999 || user <= -999)
+        {
+            System.out.println("Please enter a three-digit integer");
+            user = input.nextInt();
+        }
+        else if(human 
+    }
+}
