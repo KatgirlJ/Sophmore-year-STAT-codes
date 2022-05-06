@@ -1,0 +1,44 @@
+//Katrinna Jones
+//Programming II
+import java.util.Scanner;
+public class Triangle
+{
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner (System.in);
+        boolean scaline = true;
+        boolean triangle = true;
+        boolean equilateral = true;
+        boolean isosceles = true;
+        int sidea = 0;
+        int sideb = 0;
+        int sidec = 0;
+        System.out.println("Enter side A: ");
+        sidea  = input.nextInt();
+        System.out.println("Enter side B: ");
+        sideb  = input.nextInt();
+        System.out.println("Enter side C: ");
+        sidec  = input.nextInt(); 
+        if (sidea >= sideb + sidec|| sideb >= sidea +sidec || sidec >= sidea + sideb)
+        {
+            System.out.println ("This is not a triangle.");
+            triangle = true;
+        }
+        else if (sidea == sideb && sideb == sidec && sidec == sidea)
+        {
+            System.out.println ("This is an equilateral triangle.");  
+            equilateral = true;
+        }
+        else if (sidea == sideb && sideb != sidec || sideb == sidec && sidea != sideb || sidec == sidea && sideb != sidea)
+        {
+            System.out.println ("This is an isosceles triangle.");
+            isosceles = true;
+        }
+        else
+        {
+            System.out.println("This is an scaline triangle.");
+            scaline = true;
+        }
+        
+    }
+}
