@@ -1,0 +1,40 @@
+//Katrinna Jones
+//Programming II
+import java.util.Scanner;
+public class WhileLoops
+{
+    public static void main (String[] args)
+    {
+        int x = 0; //START
+        
+        while(x < 10) //STOP
+        {
+            //do what you want in the loop
+            x++; //you MUST change the variable in the boolean expression
+            System.out.println(x); //the order of your statements matter
+        }
+        
+        do //use this when you want to run the code to run at least once
+        {
+            x--;
+            System.out.println(x);
+        }while(x > 0); //condition checked after the loop is run
+        
+        boolean flag = true; //a flag or sentinel looks for a given value
+        int count = 0; // this is a counter which counts to something
+        Scanner input = new Scanner (System.in);
+        
+        while (flag = true)
+        {
+            System.out.println("Enter a positive integer: ");
+            int num = input.nextInt();
+            count++; //counter adds one each time
+            if(num <= 0)
+            {
+                flag = !flag;
+                count--;
+            }
+        }
+        System.out.println("You input " + count + "positive numbers.");
+    }
+}
