@@ -1,0 +1,38 @@
+
+//Katrinna Jones
+//Programming II
+public class House
+{
+    public static void main (String[] args)
+    {
+        addRoof();
+        addBase();
+        addWalk();
+    }
+    public static void addRoof()
+    {
+        System.out.println("   /\\");
+        System.out.println("  /  \\");
+        System.out.println(" /    \\");
+        System.out.println("/______\\");
+    }
+    public static void addBase()
+    {
+        for(int x = 0; x < 4;x++)
+        {
+            if(x == 3)
+            {
+                System.out.println("|______|"); 
+            }
+            else
+            {
+                System.out.println("|      |");
+            }
+        }
+    }
+    public static void addWalk()
+    {
+        System.out.println("   **   ");
+        System.out.println("   ******** ");
+    }
+}
