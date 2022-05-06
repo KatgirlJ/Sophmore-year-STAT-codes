@@ -1,0 +1,40 @@
+//Katrinna Jones
+//Programming II
+import java.text.NumberFormat;
+import java.util.Scanner;
+public class Volumes
+{
+    public static void main(String[] ages)
+    {
+        Scanner input = new Scanner (System.in);
+        double volume = 0;
+        double length = 0;
+        double height = 0;
+        double width = 0;
+        double radius = 0;
+        double squares = 0;
+        NumberFormat decimal = NumberFormat.getNumberInstance();
+        
+        System.out.println ("Rectangular Prism");
+        System.out.println ("Enter the length:");
+        length = input.nextInt();
+        System.out.println ("Enter the width");
+        width = input.nextInt();
+        System.out.println ("Enter the height");
+        height = input.nextInt();
+        volume = length * width * height;
+        System.out.println ("The volume is:" + (decimal.format(volume)));
+        
+        System.out.println ("Sphere");
+        System.out.println ("Enter the radius: ");
+        radius = input.nextInt();
+        volume = (Math.PI * Math.pow(radius * 2,3)) / 6;
+        System.out.println ("The volume is: " + (decimal.format(volume)));
+        
+        System.out.println ("Cube");
+        System.out.println ("Enter the length of each side: ");
+        squares = input.nextInt();
+        volume = Math.pow(squares,3);
+        System.out.println ("The volume is: " + (decimal.format(volume)));
+    }
+}
