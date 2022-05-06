@@ -1,0 +1,79 @@
+//Katrinna Jones
+//Programming II
+import java.util.Scanner;
+public class GrowthAndDecay
+{
+    public static void main (String[] args)
+    {
+        Scanner input = new Scanner (System.in);
+        double y = 0; //final amount
+        double n = 0; //initial amount
+        double t = 0; //time
+        double k = 0; //konstant
+        double info = 0; 
+        
+        System.out.println("1. Final Amount");
+        System.out.println("2. Initial Amount");
+        System.out.println("3. Constant");
+        System.out.println("4. Time");
+        System.out.println("What do you want to find?");
+        info = input.nextInt();
+        
+        if (info < 1 || info > 4)
+        {
+            System.out.println ("No info on this subject");
+        }
+        else 
+        {
+            if (info == 1)
+            {
+                System.out.println("Enter intial amount: ");
+                n = input.nextInt(); 
+                System.out.println("Enter Constant: ");
+                k = input.nextInt();
+                System.out.println("Enter time: ");
+                t = input.nextInt(); 
+                
+                y = n * Math.exp(k*t);
+                System.out.println("The final amount is found to be: " + y);
+            }
+            else if (info == 2)
+            {
+                System.out.println ("Enter Final amount");
+                y = input.nextInt();
+                System.out.println ("Enter constant");
+                k = input.nextInt();
+                System.out.println ("Enter time");
+                t = input.nextInt();
+                
+                n = y / Math.exp (k * t);
+                System.out.println("The inital amount is found to be: " + n);
+    
+            }
+            else if (info == 3)
+            {
+                System.out.println("Enter final amount");
+                y = input.nextInt();
+                System.out.println("Enter inital amount");
+                n = input.nextInt();
+                System.out.println("Enter time");
+                t = input.nextInt();
+                
+                k = Math.log(y / n)/t;
+                System.out.println("The constant is found to be "+ k);
+            }
+            else 
+            {
+                System.out.println("Enter final amount");
+                y = input.nextInt();
+                System.out.println("Enter inital amount");
+                n = input.nextInt();
+                System.out.println("Enter constant");
+                k = input.nextInt();
+                
+                t = Math.log(y / n)/k;
+                System.out.println("The constant is found to be "+ t);
+            }
+        }
+    }
+}
