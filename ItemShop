@@ -1,0 +1,44 @@
+//Katrinna Jones
+//Programming II
+import java.util.Scanner;
+import java.text.NumberFormat;
+public class ItemShop
+{
+        public static void main (String[] args)
+        {
+            Scanner input = new Scanner(System.in);
+            double potions;
+            potions = 0;
+            double ethers;
+            ethers = 0;
+            double elixirs;
+            elixirs =0;
+            double tax;
+            tax = 0;
+            double subtotal;
+            subtotal = 0;
+            double total;
+            total = 0;
+            double payed;
+            payed = 0;
+            double change;
+            change = 0;
+            NumberFormat money = NumberFormat.getCurrencyInstance();
+            System.out.println("Enter number of potions: ");
+            potions = input.nextInt(); 
+            System.out.println("Enter number of ethers: ");
+            ethers = input.nextInt();
+            System.out.println("Enter number of elixirs: ");
+            elixirs = input.nextInt();
+            subtotal= (double) potions*(0.49) + (double) ethers*(0.99) +(double)  elixirs*(3.50); 
+            System.out.println ("Subtotal: " + (money.format(subtotal)));
+            tax=subtotal*.05;
+            System.out.println("Tax: " + (money.format(tax)));
+            total= subtotal+ tax;
+            System.out.println("Final Total: "+ (money.format(total)));
+            System.out.println("Enter amount payed:");
+            payed = input.nextInt(); 
+            change =payed - total;
+            System.out.println("Change: " + (money.format(change)));
+        }
+}
