@@ -1,0 +1,56 @@
+//Katrinna Jones
+//Programming II
+import java.util.Scanner;
+public class Adding
+{
+    Scanner input = new Scanner(System.in);
+    private int number1;
+    private int number2;
+    private int answer;
+    private int points;
+    public Adding()
+    {
+        number1 = 0;
+        number2 = 0;
+        answer = 0;
+    }
+    public String Question()
+    {
+        int user;
+        number1 = (int)(1 + (Math.random() * 20));
+        number2 = (int)(1 + (Math.random() * 20));
+        System.out.println("Please add " + number1 + "+" + number2);
+        user = input.nextInt();
+        answer = number1 + number2;
+        
+        for(int x = 0; x == 3; x++)
+        {
+            if(user == answer)
+            {
+                if(x == 1)
+                {
+                    points = points + 5;
+                    return("Correct you've had 5 points added to your score your total is " + points);
+                }
+                else if(x == 2)
+                {
+                    points = points + 3;
+                    return("Correct you've had 3 points added to your score your total is " + points);
+                }
+                else if(x == 3)
+                {
+                    points = points + 1;
+                    return("Correct you've had 1 point added to your score your total is " + points);
+                }
+            }
+            else
+            {
+                return("Incorrect");
+                if(x == 3)
+                {
+                    return("The answer was " + answer + " 0 points have been added to your score");
+                }
+            }
+        }
+    }
+}
