@@ -1,0 +1,37 @@
+import java.util.Scanner;
+public class PrimeNumbers
+{ public static void main (String[] args)
+    {
+        Scanner input = new Scanner (System.in);
+        int number;
+        int iF;
+        int i;
+        int more = 0;
+        System.out.print("Please put in a number ");
+        number = input.nextInt();
+
+        iF = number / 2;
+       
+        if (number == 0 ||number == 1)
+        {
+            System.out.print("This number is not prime");
+        }
+        else
+        {
+            for (i = 2; i <= iF; i++)
+            {
+                if (number % i == 0)
+                {
+                    System.out.print("This number is not prime");
+                    more = 1;
+                    break;
+                }
+            }
+            if(more ==0)  
+            {
+                System.out.println("This number is prime");
+            }  
+        }
+
+    }
+}
