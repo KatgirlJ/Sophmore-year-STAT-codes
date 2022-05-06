@@ -1,0 +1,69 @@
+//Katrinna Jones
+//Programming II
+import java.util.Scanner;
+public class GuessingGame
+{
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner (System.in);
+        
+        int number = (int)(Math.random() * 20 + 1);
+        int guess = 0;
+        
+        System.out.println ("Guess a number between 1 and 20");
+        guess = input.nextInt();
+        
+        // when you make a decision in java, you use an IF
+        // each if contains a BOOLEAN EXPRESSION in its parenthesis
+        // a boolean expression can evauluate TRUE or FALSE
+        // == is the boolean operator that checks for equality
+        if (number == guess) //DON'T PUT A ; HERE
+        {
+            //Everything inisdie these brackets will run
+            //IF the boolean evaluates to TRUE
+            System.out.println("You got it Huzzah!");
+        }
+        else if (guess < number)
+        {
+            System.out.println ("Too Low");
+        }
+        else if (guess > number)
+        {
+            System.out.println("Too High");
+        }
+        else if (guess < 1 || guess > 20) //this is a COMPOUND CONDITIONAL
+        //this checks 2 or more boolean expressions
+        //|| means OR, && means AND, ! means NOT
+        {
+            System.out.println("Follow directions next time");
+        }
+        
+        else//else does not take a condition
+        {
+            //else is a catch that runs for every other option
+            System.out.println("WRONG! It was " + number);
+        }
+        //lines of code out here will execute regardless of the if 
+        System.out.println("*************");
+        //THESE ARE OPUT BOOLEAN OPERATORS
+        //==        >       <       >=      <=      != does not equal
+        //! is not
+        
+        //boolean is a primitive data type that can hold true or false
+        boolean ribs = true;
+        boolean macncheese = true;
+        
+        if (ribs == true && macncheese == true)
+        {
+            System.out.println("Big Ole BBQ dinner tonight");
+        }
+        else if (ribs == false && macncheese == true)
+        {    
+            System.out.println("Just feel like sides tonight");
+        }
+        else 
+        {
+            System.out.println("Being indecisive again I see");
+        }
+    } 
+}
