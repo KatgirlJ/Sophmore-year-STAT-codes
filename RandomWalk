@@ -1,0 +1,33 @@
+//Katrinna Jones 
+//Programming II
+public class RandomWalk
+{
+  public static void main (String[] args)
+  {
+    double av = 0;
+    for(int x = 0; x < 50;x++)
+    {
+      double bridge = 3.5;
+      while(bridge < 7)
+      {
+        //walk random 2 1
+        if(walk == 1)
+        {
+          bridge = bridge - 1;
+        }
+        else 
+        {
+          bridge = bridge + 1;
+        }
+        if(bridge <= 7)
+        {
+          
+        }
+      }
+      if(x == 25)
+      {
+      
+      }
+    }
+  }
+}
