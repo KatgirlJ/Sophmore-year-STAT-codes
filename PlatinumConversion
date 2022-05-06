@@ -1,0 +1,23 @@
+// Katrinna Jones
+// Programming II
+import java.util.Scanner;
+public class PlatinumConversion
+{
+    public static void main(String[] args) 
+    {   
+        Scanner input = new Scanner(System.in); 
+        double platinum; 
+        platinum = 7; 
+        double dollars;
+        dollars = 0;
+        
+        System.out.println("How much platinum would you like to purchase");
+        platinum = input.nextDouble();
+        
+        dollars=platinum/5 *1.13;
+        
+        System.out.println("That will cost you:" + dollars);
+    
+        
+    }
+}
