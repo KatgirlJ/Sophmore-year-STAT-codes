@@ -1,0 +1,60 @@
+//Katrinna Jones
+//Programming II
+import java.util.Scanner;
+public class ElapsedTime
+{
+    public static void main (String[] args)
+    {
+        Scanner input = new Scanner(System.in);
+        char time = 0;
+        int elaspe = 0;
+        int entered = 0;
+        boolean am = false;
+        boolean pm = false;
+        int change = 0;
+        int finaltime = 0;
+        
+        System.out.println("Enter starting hour: ");
+        entered = input.nextInt();
+        System.out.println("Enter (A)M or (P)M: ");
+        time = input.next().charAt(0);
+        System.out.println("Enter elapsed hours: ");
+        elaspe = input.nextInt();
+        if(entered < 12)
+        
+            while (elaspe > 12)
+            {
+                elaspe = elaspe - 12;
+            }
+        if (time == 65 || time == 97) //am
+        {
+            am = true;
+        }
+        else if (time == 80 || time == 112) //pm
+        {
+            pm = true;
+        }
+        finaltime = entered + elaspe;
+        while (finaltime > 12)
+        {
+            if (am == true)
+            {
+                finaltime = finaltime - 12;
+                pm = true;
+            }
+            else if (pm == true)
+            {
+                finaltime = finaltime - 12;
+                am = true;
+            }
+        }
+        if (am == true)
+        {
+            System.out.println(finaltime + "AM");
+        }
+        else if (pm == true)
+        {
+            System.out.println(finaltime + "PM");
+        }
+    }
+}
