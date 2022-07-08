@@ -1,0 +1,35 @@
+//Katrinna Jones
+//Programming II
+public class RectangleTester
+{
+    public static void main(String[] args)
+    {
+        Rectangle table = new Rectangle();
+        Rectangle book = new Rectangle();
+        
+        book.setwidth(4);
+        book.setlength(8);
+        table.setwidth(15);
+        table.setlength(10);
+        
+        System.out.println();
+        System.out.println("Table = " + table.getArea());
+        System.out.println("Book = " + book.getArea());
+        System.out.println("Book = " + book.getPerimeter());
+        System.out.println("Table = " + table.getPerimeter());
+        
+        System.out.println("Book " + book.displayAreaFormula());
+        System.out.println("Table " + table.displayPerimeterFormula());
+        
+        System.out.println("Book" + book.toString());
+        
+        System.out.println(book.equals(table));
+        book.setwidth(19);
+        table.setwidth(19);
+        System.out.println(book.equals(table));
+        
+        book.setlength(56);
+        table.setlength(56);
+        System.out.println(book.equals(table));
+    }
+}
