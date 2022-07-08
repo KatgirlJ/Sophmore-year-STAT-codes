@@ -1,0 +1,38 @@
+public class RandomStats
+{  
+    public static void main(String[] args)
+    {  
+        int items = 500;
+        int x, y;
+        int [] integers = new int [items];
+        int [] lengthegers = new int [integers.length];
+        int count = -1;
+        int count2 = 1;
+        for(x = 0; x < items; x++)
+        {
+            integers[x] = (int)(Math.random() * 10);
+        }
+
+        for(x = 0; x < integers.length; x++)
+        {  
+            int z = x + 1;
+            for(y = z; y < integers.length; y++)
+            {  
+                if(integers[x] == integers[y])
+                {  
+                    count2++;
+                    lengthegers[y] = count;
+                }  
+            }  
+            if(lengthegers[x] != count)
+                lengthegers[x] = count2;
+        }  
+
+        System.out.println("Digit   Occurrences");
+
+        for(x = 0; x < lengthegers.length; x++){
+            if(lengthegers[x] != count)
+                System.out.println(integers[x] + "     - " + lengthegers[x]);
+        }  
+    }
+}  
