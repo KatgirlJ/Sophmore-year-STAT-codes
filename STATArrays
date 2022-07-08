@@ -1,0 +1,65 @@
+//Katrinna Jones
+//Programming II
+
+import java.util.Arrays;
+public class STATArrays
+{
+    public static void main (String[] args)
+    {
+        String food0 = "El Gran Charo";
+        String food1 = "China King";
+        String food2 = "Chipotle";
+        String food3 = "Chili's";
+        String food4 = "Checkers";
+        String food5 = "Costco";
+        String food6 = "Freddies";
+        String food7 = "Jack in the Box";
+        String food8 = "In & Out";
+        String food9 = "Five Guys";
+        //THIS IS DUMB. what am I doing here? every new location
+        // has to be a new variable. They are not connected in any way
+        //Wouldn't it be nice if we had ONE variable name that could contain
+        //a lot simillar linked info?? WELL?? WOULD IT BE??
+
+        //We can use an Array to do this
+        String[] food = new String[10];
+        //the [] make food a String array, which can hold serval things in it
+        //the [10] means that the food has room for 10 ELEMENTS
+
+        //this is how you store info into a specific INDEX
+        food[0] = "El Gran Charro";
+        food[7] = "Jack in the Box";
+        food[4] = "Checkers";
+
+        //this is how you store info into a specific index
+        System.out.println();
+        System.out.println(food[0]);
+        System.out.println(food[4]);
+        System.out.println(food[7]);
+
+        //To print out a full array...
+        System.out.println(Arrays.toString(food));
+
+        //this declares an array with give values
+        int[] ranks =  {3, 6, 1, 8, 2, 0, 5, 10, 1, 9};
+        System.out.println(Arrays.toString(ranks));
+
+        //Arrays are IMMUTABLE. Once they are declared they can't change
+        //their size can never be altered. This is a big limitation.
+
+        food = new String[100];
+        //This points food to a completly new array and you can't access
+        //any of the old info
+
+        boolean[] test; //this declres an array
+
+        //Lets assume a USER INPUT A DESIRED SIZE
+        int num = 42;
+        test = new boolean[num]; //this instatiates and initializes the array
+        for(int x = 0; x < ranks.length;x++) //.length would be 10
+        {
+            ranks[x] = ranks[x] * 10;
+            System.out.println(ranks[x]);
+        }
+    }
+}
