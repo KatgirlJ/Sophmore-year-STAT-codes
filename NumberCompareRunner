@@ -1,0 +1,37 @@
+//Name -
+//Date -
+//Class -
+//Lab  - 
+
+public class NumberCompareRunner
+{
+    public static void main( String args[] )
+    {
+        NumberCompare test = new NumberCompare(5,6);
+        System.out.println(test);
+        System.out.println("largest == "+test.getLargest());
+        System.out.println("smallest == "+test.getSmallest()+"\n\n");
+        
+        test.setNums(25,19);
+        System.out.println(test);
+        System.out.println("largest == "+test.getLargest());
+        System.out.println("smallest == "+test.getSmallest()+"\n\n");
+        
+        test.setNums(-25,10324);
+        System.out.println(test);
+        System.out.println("largest == "+test.getLargest());
+        System.out.println("smallest == "+test.getSmallest()+"\n\n");
+        
+        test.setNums(12321,-423);
+        System.out.println(test);
+        System.out.println("largest == "+test.getLargest());
+        System.out.println("smallest == "+test.getSmallest()+"\n\n");
+        
+        test.setNums(34,33);
+        System.out.println(test);
+        System.out.println("largest == "+test.getLargest());
+        System.out.println("smallest == "+test.getSmallest()+"\n\n");
+        //add more test cases
+
+    }
+}
