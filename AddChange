@@ -1,0 +1,31 @@
+//Katrinna Jones
+//Programming II
+import java.util.Scanner;
+import java.text.NumberFormat;
+public class AddCoins
+{
+    public static void main (String[] args)
+    {
+        Scanner input = new Scanner (System.in);
+        int quarters = 25;
+        int dimes = 10;
+        int nickels = 5;
+        int pennies = 1;
+        NumberFormat money = NumberFormat.getCurrencyInstance();
+        System.out.println("Enter your total coins: ");
+        System.out.println("Quarters: ");
+        quarters = input.nextInt();
+        System.out.println("Dimes: ");
+        dimes = input.nextInt();
+        System.out.println("Nickels:");
+        nickels = input.nextInt();
+        System.out.println("Pennies:");
+        pennies = input.nextInt();
+        System.out.println("Total: " +(money.format(getDollarAmount(quarters,dimes,nickels,pennies))));
+    }
+    public static double getDollarAmount(double quarters,double dimes,double nickels,double pennies)
+    {
+        return pennies * .01 + quarters * .25 + dimes * .1 + nickels * .05;
+        
+    }
+}
