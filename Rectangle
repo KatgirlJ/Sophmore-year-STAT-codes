@@ -1,0 +1,67 @@
+//Katrinna Jones
+//Programming II
+public class Rectangle
+{   
+    private double length;
+    private double width;
+    
+    private static final double PI = 3.141592653;
+    public Rectangle()
+    {
+        length = 1;
+        width = 1;
+    }
+    
+    public Rectangle(double w, double l)
+    {
+        length = l;
+        width = w;
+    }
+
+    public double getlength()
+    {
+        return length;
+    }
+    public double getwidth()
+    {
+        return width;
+    }
+    public void setlength(double l)
+    {
+        length = l;
+    }
+    public void setwidth(double w)
+    {
+        width = 1;
+    }
+    
+    public double getarea(double l, double w, double area)
+    {
+        area = l * w;
+        return area;
+    }
+    public double getperimeter(double l, double w,double perimeter)
+    {
+        perimeter = 2 * (l * w);
+        return perimeter;
+    }
+    public static String displayAreaFormula()
+    {
+        return "The area of a recangle is A = l * w";
+    }
+    public static String displayPerimeterFormula()
+    {
+        return "The area of a recangle is P = 2(l * w)";
+    }
+    public String toString()
+    {
+        return "My length is " + length + "my width is" + width;
+    }
+    public boolean equals(Object obj)
+    {
+        Rectangle other = (Rectangle) obj;
+        if(getwidth() == other.getwidth())
+            return true;
+        return false;
+    }
+}
