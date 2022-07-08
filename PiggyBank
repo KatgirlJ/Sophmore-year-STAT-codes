@@ -1,0 +1,31 @@
+
+//Katrinna Jones
+//Programming II
+public class PiggyBank
+{
+    private double total;
+    public void addpenny()
+    {
+        total = total + .01;
+    }
+    public void addnickel()
+    {
+        total = total + .05;
+    }
+    public void adddime()
+    {
+        total = total + .1;
+    }
+    public void addquarter()
+    {
+        total = total + .25;
+    }
+    public String toSting()
+    {
+        return "You have  $" + total + " in your bank";
+    }
+    public void smashBank()
+    {
+        
+    }
+}
